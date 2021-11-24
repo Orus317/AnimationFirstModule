@@ -149,9 +149,9 @@
             transform: scale(.7);   
             filter: blur(4px);
         }
-        .meet:hover ~ .button-for-meet{
+        .meet:hover  .button-for-meet{
             opacity: 1;
-            transform: rotateZ(45deg) translate(70px, 25px) scale(1);
+            transform: translate(-20px, 90px) scale(1);
         }
         .button-for-meet
         /*Para animar la parte inferior*/
@@ -172,9 +172,9 @@
         .ghost-for-meet:hover ~ .circle--superior{
             transform: scale(.7);
         }
-        .ghost-for-meet:hover ~ .button-for-clasroom{
+        .ghost-for-meet:hover  .button-for-clasroom{
             opacity: 1;
-            transform: rotateZ(45deg) translate(190px, -10px) scale(1);
+            transform: rotateZ(45deg) translate(90px, -110px) scale(1);
         }
         /* .button-for-clasroom:hover ~ .circle--inferior{
             transform: translateY(0);
@@ -193,27 +193,32 @@
             border-radius: 20px;
             background-color: #EFF3F5;
             
-        }
+        }   
 
         .button-for-meet{
-            z-index: 6;
             width: 95px;
             height: 40px;
-            transform: rotateZ(45deg) translate(70px, 25px) scale(0);
+            transform:translate(-20px, 90px) scale(0);
             background-color: #5C5560;
             color: #EFF3F5;
             opacity: 0;
             transition: all .2s ease-in-out;
         }
         .button-for-clasroom{
-            z-index: 6;
             width: 95px;
             height: 40px;
-            transform: rotatez(45deg) translate(190px, -10px) scale(0);
+            transform:translate(90px, -110px) scale(0);
             background-color: #5C5560;
             color: #EFF3F5;
             opacity: 0;
             transition: all .2s ease-in-out;
+        }
+        .button a{
+            text-decoration: none;
+            color: #EFF3F5;
+        }
+        .button:hover a{
+            color: #5C5560;
         }
         .button-for-meet:hover{
             background-color: #EFF3F5;
@@ -223,6 +228,7 @@
             background-color: #EFF3F5;
             color: #5C5560;
         }
+
     </style>
 </head>
 <body>
@@ -236,12 +242,15 @@
             <div class="circle--teacher_description">
                 <div class="button">Nombre del profesor</div>
             </div>
-            <div class="ghost-for-meet"></div>
-            <figure class="logo-container meet">
+            <div class="ghost-for-meet">
+                <div class="button button-for-clasroom"><a href="#">Entrar</a></div>
+            </div>
+            <div class="logo-container meet">
                 <img src="./meet-logo.png" alt="" srcset="">
-            </figure>
-            <div class="button button-for-meet"><a href="#">Entrar</a></div>
-            <div class="button button-for-clasroom"><a href="#">Entrar</a></div>
+                <div class="button button-for-meet"><a href="#">Entrar</a></div>
+            </div>
+            <!-- <div class="button button-for-meet"><a href="#">Entrar</a></div>
+            <div class="button button-for-clasroom"><a href="#">Entrar</a></div> -->
             <figure class="logo-container classroom">
                 <img src="./classroom-logo.png" alt="" srcset="">
             </figure>
